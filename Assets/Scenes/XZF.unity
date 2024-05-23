@@ -445,6 +445,7 @@ GameObject:
   - component: {fileID: 450635375}
   - component: {fileID: 450635377}
   - component: {fileID: 450635376}
+  - component: {fileID: 450635378}
   m_Layer: 0
   m_Name: Sesame
   m_TagString: Untagged
@@ -475,7 +476,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450635374}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f374290a390ec5f46882b6c06f914834, type: 3}
   m_Name: 
@@ -526,6 +527,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: {fileID: 787147310}
   tipPanel: {fileID: 1198776265}
+--- !u!114 &450635378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450635374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a11862926720f544fb5d904995c2b57b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source:
+    field: {fileID: 450635378}
+  onlyProcessOnActiveAndEnabled: 1
+  interval: 0
 --- !u!1 &540366086
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,6 +856,7 @@ GameObject:
   - component: {fileID: 775944717}
   - component: {fileID: 775944718}
   - component: {fileID: 775944719}
+  - component: {fileID: 775944720}
   m_Layer: 0
   m_Name: Onion
   m_TagString: Untagged
@@ -918,6 +936,22 @@ MonoBehaviour:
       m_Calls: []
   value: 0
   keyCode: 330
+--- !u!114 &775944720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775944716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a11862926720f544fb5d904995c2b57b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source:
+    field: {fileID: 775944719}
+  onlyProcessOnActiveAndEnabled: 1
+  interval: 0
 --- !u!1 &787147310 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7774344186399642229, guid: 1bb7642ebf8d0a34aa23fc586ea87e6a,
@@ -1378,6 +1412,7 @@ GameObject:
   - component: {fileID: 966337203}
   - component: {fileID: 966337205}
   - component: {fileID: 966337204}
+  - component: {fileID: 966337206}
   m_Layer: 0
   m_Name: Sauce
   m_TagString: Untagged
@@ -1408,7 +1443,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966337202}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f374290a390ec5f46882b6c06f914834, type: 3}
   m_Name: 
@@ -1459,6 +1494,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: {fileID: 1830664620}
   tipPanel: {fileID: 1198776265}
+--- !u!114 &966337206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966337202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a11862926720f544fb5d904995c2b57b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source:
+    field: {fileID: 966337204}
+  onlyProcessOnActiveAndEnabled: 1
+  interval: 0
 --- !u!1 &1198776265
 GameObject:
   m_ObjectHideFlags: 0
