@@ -8,9 +8,12 @@ public class Sauce : Food
     public static Sauce instance;
     //public Material onionMaterial;
     public GameObject interactable;
+    public GameObject sauceBtnAction;
     public GameObject tipPanel;
+    public GameObject sauceOb;
+    public GameObject sesameInter;
 
-    //private GameObject inputScript;
+    public int flag = 0; //判断物体是否已经放在锅子上
     private void Awake()
     {
         instance = this;
@@ -27,13 +30,21 @@ public class Sauce : Food
         if (collision.gameObject.tag == "powl")
         {
             tipPanel.SetActive(true);
-            GameObject.Find("Sauce").GetComponent<UnityInputManagerButtonAction>().enabled = true;
+            sauceBtnAction.SetActive(true);
+            flag = 1;
         }
     }
     public void SauceFinished()
     {
-        tipPanel.SetActive(false);
-        Destroy(gameObject);
-        isFinishedList[1] = 1;
+       
+        if(!GameObject.Find("Onion") && flag == 1)
+        {
+            Debug.Log("为什么要毁掉酱！");
+            tipPanel.SetActive(false);
+            sesameInter.SetActive(true);
+            Destroy(sauceOb);
+            isFinishedList[1] = 1;
+        }
+        
     }
 }

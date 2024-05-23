@@ -9,6 +9,10 @@ public class Sesame :Food
     //public Material onionMaterial;
     public GameObject interactable;
     public GameObject tipPanel;
+    public GameObject sesameOb;
+    public GameObject sesameBtnAct;
+
+    public int flag = 0;
 
     //private GameObject inputScript;
     private void Awake()
@@ -27,13 +31,19 @@ public class Sesame :Food
         if (collision.gameObject.tag == "powl")
         {
             tipPanel.SetActive(true);
-            GameObject.Find("Sesame").GetComponent<UnityInputManagerButtonAction>().enabled = true;
+            sesameBtnAct.SetActive(true);
+            flag = 1;
         }
     }
     public void SesameFinished()
     {
-        tipPanel.SetActive(false);
-        Destroy(gameObject);
-        isFinishedList[2] = 1;
+        if(!GameObject.Find("Onion") && !GameObject.Find("Sauce") && flag == 1 )
+        {
+            Debug.Log("为什么要毁掉芝麻！");
+            tipPanel.SetActive(false);
+            Destroy(sesameOb);
+            isFinishedList[2] = 1;
+        }
+       
     }
 }
