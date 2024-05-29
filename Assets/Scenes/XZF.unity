@@ -139,7 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b0a4c448be0b41b81409301bc9c44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFinishedList: 00000000000000000000000000000000
   menuList: []
   tipPanel: {fileID: 1198776265}
   foodOb: {fileID: 775944716}
@@ -1338,7 +1337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aa3c0bede064674db04fb4a7ce5188c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFinishedList: 00000000000000000000000000000000
   menuList: []
   tipPanel: {fileID: 1198776265}
   foodOb: {fileID: 450635374}
@@ -6642,7 +6640,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793999213}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.89, y: 0.509, z: -5.9}
+  m_LocalPosition: {x: -0.89, y: -0.21, z: -4.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1552402926}
@@ -6749,7 +6747,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeb8eccda8c54924ab023f7b07ccd19b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFinishedList: 00000000000000000000000000000000
   menuList: []
   tipPanel: {fileID: 1198776265}
   foodOb: {fileID: 966337202}

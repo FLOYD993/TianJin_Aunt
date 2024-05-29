@@ -1,0 +1,33 @@
+{
+    "name": "AuntInput",
+    "maps": [
+        {
+            "name": "Aunt",
+            "id": "a18a3e1f-6272-4235-8af6-20076ae9947e",
+            "actions": [
+                {
+                    "name": "Dialogue",
+                    "type": "Button",
+                    "id": "e6f173df-6c59-4988-981e-14445ff49f8b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d6c72325-b56d-4e50-987d-8e0bbceae6cf",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dialogue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

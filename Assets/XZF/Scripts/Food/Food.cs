@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Food : MonoBehaviour
 {
-    public int[] isFinishedList = {0, 0, 0, 0 }; //paste, onion、sauce、sesame
+    //public int[] isFinishedList = {0, 0, 0, 0 }; //paste, onion、sauce、sesame
     private int onionFinished = 0;
     private int sauceFinished = 0;
     private int sesameFinished = 0;
@@ -36,7 +36,10 @@ public class Food : MonoBehaviour
     }
     private void Update()
     {
-        isFinishedList[0] = Paste.instance.pasteFinished;
+        //isFinishedList[0] = Paste.instance.pasteFinished;
+        //isFinishedList[1] = onionFinished;
+        //isFinishedList[2] = sauceFinished;
+        //isFinishedList[3] = sesameFinished;
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -45,12 +48,33 @@ public class Food : MonoBehaviour
         {
             //Debug.Log("放在了锅上");
             tipPanel.SetActive(true);
-            Debug.Log("现在食物的："+isFinishedList[foodIndex]);
-            Debug.Log("上一个食物的：" + isFinishedList[foodIndex-1]);
-            if (isFinishedList[foodIndex-1] == 1)
+            //Debug.Log("现在食物的："+isFinishedList[foodIndex]);
+            //Debug.Log("上一个食物的：" + isFinishedList[foodIndex-1]);
+            switch(foodIndex)
             {
-                foodBtnAct.SetActive(true);
+                case 1:
+                    if(Paste.instance.pasteFinished == 1)
+                    {
+                        foodBtnAct.SetActive(true);
+                    };
+                    break;
+                case 2:
+                    if(onionFinished == 1)
+                    {
+                        foodBtnAct.SetActive(true);
+                    };
+                    break;
+                case 3:
+                    if(sauceFinished == 1)
+                    {
+                        foodBtnAct.SetActive(true);
+                    };
+                    break;
             }
+            //if (isFinishedList[foodIndex-1] == 1)
+            //{
+            //    foodBtnAct.SetActive(true);
+            //}
         }
     }
     public void FoodFinished()
@@ -68,7 +92,6 @@ public class Food : MonoBehaviour
                 case 2: sauceFinished = 1;break;
                 case 3: sesameFinished = 1; break;
             }
-            isFinishedList[foodIndex] = 1;
             pasteMesh.material = pasteNext;
             Destroy(foodOb);
 
