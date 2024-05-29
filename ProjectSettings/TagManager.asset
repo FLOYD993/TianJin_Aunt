@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - powl
+  - paste
   layers:
   - Default
   - TransparentFX
