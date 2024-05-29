@@ -139,6 +139,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b0a4c448be0b41b81409301bc9c44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFinishedList: 00000000000000000000000000000000
+  menuList: []
   tipPanel: {fileID: 1198776265}
   foodOb: {fileID: 775944716}
   foodBtnAct: {fileID: 1904380320}
@@ -1336,6 +1338,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aa3c0bede064674db04fb4a7ce5188c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFinishedList: 00000000000000000000000000000000
+  menuList: []
   tipPanel: {fileID: 1198776265}
   foodOb: {fileID: 450635374}
   foodBtnAct: {fileID: 1697665383}
@@ -2178,7 +2182,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1830664621}
     - target: {fileID: 9002943761467501429, guid: 7cda7043fe8125d47be5d2a13ddd11a5,
         type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -2187,7 +2191,7 @@ PrefabInstance:
     - target: {fileID: 9002943761467501429, guid: 7cda7043fe8125d47be5d2a13ddd11a5,
         type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SauceFinished
+      value: FoodFinished
       objectReference: {fileID: 0}
     - target: {fileID: 9002943761467501429, guid: 7cda7043fe8125d47be5d2a13ddd11a5,
         type: 3}
@@ -2537,7 +2541,7 @@ PrefabInstance:
     - target: {fileID: 9002943761467501429, guid: 7cda7043fe8125d47be5d2a13ddd11a5,
         type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SesameFinished
+      value: FoodFinished
       objectReference: {fileID: 0}
     - target: {fileID: 9002943761467501429, guid: 7cda7043fe8125d47be5d2a13ddd11a5,
         type: 3}
@@ -3328,7 +3332,7 @@ PrefabInstance:
     - target: {fileID: 3425589306487620505, guid: c83d63619306b0845a841dd3cc213a70,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7455428504947032323, guid: c83d63619306b0845a841dd3cc213a70,
         type: 3}
@@ -6745,6 +6749,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeb8eccda8c54924ab023f7b07ccd19b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFinishedList: 00000000000000000000000000000000
+  menuList: []
   tipPanel: {fileID: 1198776265}
   foodOb: {fileID: 966337202}
   foodBtnAct: {fileID: 311487641}
@@ -6994,7 +7000,7 @@ PrefabInstance:
     - target: {fileID: 2764921037832162238, guid: 0b5f198c853b9794680bf089e64daf28,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2764921037832162239, guid: 0b5f198c853b9794680bf089e64daf28,
         type: 3}

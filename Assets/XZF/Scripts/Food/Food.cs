@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+//using System.Diagnostics;
+//using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Food : MonoBehaviour
 {
-    protected int[] isFinishedList = {0, 0, 0, 0 }; //paste, onion、sauce、sesame
+    public int[] isFinishedList = {0, 0, 0, 0 }; //paste, onion、sauce、sesame
+    private int onionFinished = 0;
+    private int sauceFinished = 0;
+    private int sesameFinished = 0;
     public Text[] menuList;
     //public static Onion instance;
     ////public Material onionMaterial;
@@ -35,11 +40,13 @@ public class Food : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("可以判断撞");
+        //Debug.Log("可以判断撞");
         if (collision.gameObject.tag == "paste")
         {
-            Debug.Log("放在了锅上");
+            //Debug.Log("放在了锅上");
             tipPanel.SetActive(true);
+            Debug.Log("现在食物的："+isFinishedList[foodIndex]);
+            Debug.Log("上一个食物的：" + isFinishedList[foodIndex-1]);
             if (isFinishedList[foodIndex-1] == 1)
             {
                 foodBtnAct.SetActive(true);
@@ -55,9 +62,16 @@ public class Food : MonoBehaviour
             {
                 nextFoodInter.SetActive(true);
             }
+            switch(foodIndex)
+            {
+                case 1: onionFinished = 1;break;
+                case 2: sauceFinished = 1;break;
+                case 3: sesameFinished = 1; break;
+            }
+            isFinishedList[foodIndex] = 1;
             pasteMesh.material = pasteNext;
             Destroy(foodOb);
-            isFinishedList[foodIndex] = 1;
+
         }
     }
 }
